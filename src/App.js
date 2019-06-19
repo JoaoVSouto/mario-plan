@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import Navbar from './components/layout/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
@@ -13,6 +13,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Dashboard} />
+          <Redirect from="*" to="/" />
         </Switch>
       </div>
     </BrowserRouter>
