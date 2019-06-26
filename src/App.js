@@ -4,8 +4,11 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
 import ProjectDetails from './components/projects/ProjectDetails';
+import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/SignUp';
 
 import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js/materialize';
 
 function App() {
   return (
@@ -15,6 +18,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route path="/project/:id" component={ProjectDetails} />
+          <Route path="/signin" component={SignIn} />
+          <Route path="/signup" component={SignUp} />
           <Redirect from="*" to="/" />
         </Switch>
       </div>
