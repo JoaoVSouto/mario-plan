@@ -23,25 +23,25 @@ class CreateProject extends Component {
         <form onSubmit={this.handleSubmit} className="white">
           <h5 className="grey-text text-darken-3">Create new project</h5>
           <div className="input-field">
-            <label htmlFor="title">Title</label>
             <input
               type="text"
               id="title"
               className="validate"
-              required
+              required="required"
               aria-required="true"
               onChange={this.handleChange}
             />
+            <label htmlFor="title">Project Title</label>
           </div>
           <div className="input-field">
-            <label htmlFor="content">Project Content</label>
             <textarea
               id="content"
               className="materialize-textarea validate"
-              required
+              required="required"
               aria-required="true"
               onChange={this.handleChange}
             />
+            <label htmlFor="content">Project Content</label>
           </div>
           <div className="input-field">
             <button className="btn pink lighten-1 z-depth-0">Create</button>

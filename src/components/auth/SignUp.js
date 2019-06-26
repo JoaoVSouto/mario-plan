@@ -25,7 +25,6 @@ class SignUp extends Component {
         <form onSubmit={this.handleSubmit} className="white">
           <h5 className="grey-text text-darken-3">Sign Up</h5>
           <div className="input-field">
-            <label htmlFor="firstName">First Name</label>
             <input
               type="text"
               id="firstName"
@@ -34,31 +33,36 @@ class SignUp extends Component {
               aria-required="true"
               onChange={this.handleChange}
             />
+            <label htmlFor="firstName">First Name</label>
           </div>
           <div className="input-field">
-            <label htmlFor="lastName">Last Name</label>
             <input
               type="text"
               id="lastName"
               className="validate"
-              required
+              required="required"
               aria-required="true"
               onChange={this.handleChange}
             />
+            <label htmlFor="lastName">Last Name</label>
           </div>
           <div className="input-field">
-            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
               className="validate"
-              required
+              required="required"
               aria-required="true"
               onChange={this.handleChange}
             />
+            <label htmlFor="email">Email</label>
+            <span
+              className="helper-text"
+              data-error="Must be a valid email"
+              data-success="Perfect!"
+            />
           </div>
           <div className="input-field">
-            <label htmlFor="password">Password</label>
             <input
               type="password"
               id="password"
@@ -67,6 +71,7 @@ class SignUp extends Component {
               aria-required="true"
               onChange={this.handleChange}
             />
+            <label htmlFor="password">Password</label>
           </div>
           <div className="input-field">
             <button className="btn pink lighten-1 z-depth-0">Sign Up</button>
